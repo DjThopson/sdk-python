@@ -22,7 +22,7 @@ def index(req, **kwargs):
     }
     mp = mercadopago.MP("CLIENT_ID", "CLIENT_SECRET")
 
-    preferenceResult = mp.preference.create(preference)
+    preferenceResult = mp.create_preference(preference)
 
     url = preferenceResult["response"]["init_point"]
 
